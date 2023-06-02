@@ -1,0 +1,122 @@
+{
+    "rules": [
+        {
+            "conditions": {
+                "predicate": "All",
+                "conditions": [
+                    {
+                        "fieldName": "fromEmail",
+                        "predicate": "Contains",
+                        "value": "jobs-noreply@linkedin.com"
+                    },
+                    {
+                        "fieldName": "subject",
+                        "predicate": "Contains",
+                        "value": "applied"
+                    }
+                ]
+            },
+            "actions": [
+                "Mark as read",
+                "Add label"
+            ]
+        },
+        {
+            "conditions": {
+                "predicate": "Any",
+                "conditions": [
+                    {
+                        "fieldName": "subject",
+                        "predicate": "Contains",
+                        "value": "Node JS"
+                    },
+                    {
+                        "fieldName": "message",
+                        "predicate": "Contains",
+                        "value": "application"
+                    }
+                ]
+            },
+            "actions": [
+                "Archive message"
+            ]
+        },
+        {
+            "conditions": {
+                "predicate": "All",
+                "conditions": [
+                    {
+                        "fieldName": "toEmail",
+                        "predicate": "Contains",
+                        "value": "vasanth7085@gmail.com"
+                    },
+                    {
+                        "fieldName": "receivedDateTime",
+                        "predicate": "Less than",
+                        "value": "2023-05-01"
+                    }
+                ]
+            },
+            "actions": [
+                "Archive message"
+            ]
+        },
+        {
+            "conditions": {
+                "predicate": "Any",
+                "conditions": [
+                    {
+                        "fieldName": "fromEmail",
+                        "predicate": "Does not Contain",
+                        "value": "jobalert@timesjobs.com"
+                    },
+                    {
+                        "fieldName": "subject",
+                        "predicate": "Contain",
+                        "value": "promotion"
+                    }
+                ]
+            },
+            "actions": [
+                "Mark as read",
+                "Add label"
+            ]
+        },
+        {
+            "conditions": {
+                "predicate": "All",
+                "conditions": [
+                    {
+                        "fieldName": "receivedDateTime",
+                        "predicate": "Greater than",
+                        "value": "2023-01-01"
+                    }
+                ]
+            },
+            "actions": [
+                "Mark as unread"
+            ]
+        },
+        {
+            "conditions": {
+                "predicate": "Any",
+                "conditions": [
+                    {
+                        "fieldName": "message",
+                        "predicate": "Contains",
+                        "value": "Your application"
+                    },
+                    {
+                        "fieldName": "subject",
+                        "predicate": "Equals",
+                        "value": "Developer"
+                    }
+                ]
+            },
+            "actions": [
+                "Mark as read",
+                "Add label"
+            ]
+        }
+    ]
+}

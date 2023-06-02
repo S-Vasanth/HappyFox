@@ -1,0 +1,52 @@
+Rule 1:
+Conditions:
+The email's "fromEmail" field must contain the value "jobs-noreply@linkedin.com".
+The email's "subject" field must contain the value "applied".
+
+Actions:
+Mark the email as read.
+Add a label to the email.
+This rule is designed to handle emails from LinkedIn job applications. When an email matches both conditions, it will be marked as read and labeled.
+
+Rule 2:
+Conditions:
+Either the email's "subject" field must contain the value "Node JS", or the email's "message" field must contain the value "application".
+
+Actions:
+Archive the message.
+This rule is designed to handle emails related to Node.js or job applications. If an email matches either of the conditions, it will be archived.
+
+Rule 3:
+Conditions:
+The email's "toEmail" field must contain the value "vasanth7085@gmail.com".
+The email's "receivedDateTime" must be less than the date "2023-05-01".
+
+Actions:
+Archive the message.
+This rule is designed to handle emails sent to a specific email address that were received before a certain date. If an email matches both conditions, it will be archived.
+
+Rule 4:
+Conditions:
+The email's "fromEmail" field must not contain the value "jobalert@timesjobs.com".
+The email's "subject" field must contain the value "promotion".
+
+Actions:
+Mark the email as read.
+Add a label to the email.
+This rule is designed to handle promotional emails. If an email matches either of the conditions, it will be marked as read and labeled.
+
+Rule 5:
+Conditions:
+The email's "receivedDateTime" must be greater than the date "2023-01-01".
+
+Actions:
+Mark the email as unread.
+This rule is designed to handle emails received after a specific date. If an email matches the condition, it will be marked as unread.
+
+Rule 6:
+Conditions:
+Either the email's "message" field must contain the value "Your application", or the email's "subject" field must be equal to "Developer".
+
+Actions:
+Mark the email as read.
+Add a label to the email.
